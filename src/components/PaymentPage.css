@@ -1,0 +1,83 @@
+/* PaymentPage.css */
+
+.payment-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+/* Ensure the parent container of `.pay` has this style */
+
+.payment-container {
+  position: relative;
+  /* Other styles for the container */
+}
+.pay {
+  color: #161012; /* Dark text for contrast */
+  background-color: rgb(22, 224, 180); /* Vibrant background */
+  text-align: center;
+  padding: 10px 20px; /* Increased padding for better spacing */
+  width: auto; /* Adjust width based on content */
+  max-width: 80%; /* Ensure it doesn't get too wide on larger screens */
+  position: absolute;
+  top: 20%; /* Center vertically */
+  left: 30%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust translation for true centering */
+  border-radius: 25px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  font-weight: bold;
+  font-family: 'Arial', sans-serif; /* Clean, readable font */
+  z-index: 2; /* Ensure it's above other content */
+
+  /* Animation for subtle pulsing effect */
+  animation: pulseAnimation 2s infinite;
+}
+
+/* Keyframes for the pulsing effect */
+@keyframes pulseAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+.payment-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+ 
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.qr-code {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.upi {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
